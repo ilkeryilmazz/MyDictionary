@@ -9,18 +9,13 @@ namespace MyDictionary
         public TValue[] items;
         public TKey[] keys;
         public TValue errorArray;
-        //constructor
         public MyDictionary()
         {
             items = new TValue[0];
-            keys = new TKey[0];
-            
-
-    }
-       
+            keys = new TKey[0];   
+        }
         public void Add(TKey key,TValue item)
-        {
-            
+        { 
             TValue[] tempItems = items;
             TKey[] tempKeys = keys;
             keys = new TKey[keys.Length + 1];
@@ -39,9 +34,7 @@ namespace MyDictionary
             
         }
         public TValue Yazdir(TKey key)
-        {
-
-            
+        {  
             for (int i = 0; i < keys.Length; i++)
             {
                 if (keys[i].Equals(key))
@@ -49,8 +42,7 @@ namespace MyDictionary
                     return items[i];
                 }
             }
-            return errorArray;
-            
+            return errorArray;  
         }       
     } 
 }
