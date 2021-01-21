@@ -9,11 +9,22 @@ namespace MyDictionary
         {
             MyDictionary<int,string> myDictionary = new MyDictionary<int,string>();
            
-            myDictionary.Add(1, "Masa");
-            myDictionary.Add(2, "Telefon");
-            myDictionary.Add(3, "Bilgisyar");
-            myDictionary.Add(4, "Monitör");
-            Console.WriteLine(myDictionary.Yazdir(1));
+            myDictionary.Add(157, "Masa");
+            myDictionary.Add(192, "Telefon");
+            myDictionary.Add(172, "Bilgisyar");
+            myDictionary.Add(130, "Monitör");
+            myDictionary.Add(78, "Kulaklık");
+            myDictionary.Add(42, "Mikrofon");
+            myDictionary.Add(36, "Mouse");
+            myDictionary.Add(72, "Klavye");
+            
+
+            Console.WriteLine(myDictionary.Yazdir(157));
+
+            foreach (var item in myDictionary.keys)
+            {
+                Console.WriteLine(myDictionary.Yazdir(item));
+            }
             
         }
     }

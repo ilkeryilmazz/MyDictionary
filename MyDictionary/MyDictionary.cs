@@ -12,8 +12,11 @@ namespace MyDictionary
         public MyDictionary()
         {
             items = new TValue[0];
-            keys = new TKey[0];   
+            keys = new TKey[0];
+            
+
         }
+      
         public void Add(TKey key,TValue item)
         { 
             TValue[] tempItems = items;
@@ -33,6 +36,7 @@ namespace MyDictionary
             items[items.Length - 1] = item;
             
         }
+        
         public TValue Yazdir(TKey key)
         {  
             for (int i = 0; i < keys.Length; i++)
