@@ -21,7 +21,7 @@ namespace MyDictionary
         public void Add(TKey key,TValue item)
         {
             
-            TValue[] tempArray = items;
+            TValue[] tempItems = items;
             TKey[] tempKeys = keys;
             keys = new TKey[keys.Length + 1];
             for (int i = 0; i < tempKeys.Length; i++)
@@ -30,21 +30,21 @@ namespace MyDictionary
             }
             keys[keys.Length - 1] = key;
             items = new TValue[items.Length + 1];
-            for (int i = 0; i < tempArray.Length; i++)
+            for (int i = 0; i < tempItems.Length; i++)
             {
-                items[i] = tempArray[i];
+                items[i] = tempItems[i];
             }
            
             items[items.Length - 1] = item;
             
         }
-        public TValue Yazdir(TKey alias)
+        public TValue Yazdir(TKey key)
         {
 
             
             for (int i = 0; i < keys.Length; i++)
             {
-                if (keys[i].Equals(alias))
+                if (keys[i].Equals(key))
                 {
                     return items[i];
                 }
