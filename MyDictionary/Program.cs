@@ -25,7 +25,6 @@ namespace MyDictionary
             {
                 Console.WriteLine(myDictionary.Yazdir(item));
             }
-            
         }
     }
 }
